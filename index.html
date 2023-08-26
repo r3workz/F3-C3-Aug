@@ -15,9 +15,17 @@
 		<div id="navLogo">
 			<a href=#>Welcome</a>
 		</div>
+
+<!--		Specifically 2 pages were asked in the problem statement. so added profile page. else single page with hidden section had less LoC and had less redundant codes.-->
+<!--		To revert it back to single page with hidden section. Uncomment lines 22-25 & 46-52 and comment out lines 26-29-->
+
+<!--		<ul id="navLinks">-->
+<!--			<li id="signUpItem" class="navLinks"><a href="#signUp" onclick="checkAccessToken()">Signup</a></li>-->
+<!--			<li id="profileItem" class="navLinks"><a href="#profile" onclick="checkAccessToken()">Profile</a></li>-->
+<!--		</ul>-->
 		<ul id="navLinks">
-			<li id="signUpItem" class="navLinks"><a href="#signUp" onclick="checkAccessToken()">Signup</a></li>
-			<li id="profileItem" class="navLinks"><a href="#profile" onclick="checkAccessToken()">Profile</a></li>
+			<li id="signUpItem" class="navLinks"><a href="#" style="font-weight: bold; color: white" onclick="checkAccessToken()">Signup</a></li>
+			<li id="profileItem" class="navLinks"><a href="#" onclick="checkAccessToken()">Profile</a></li>
 		</ul>
 	</nav>
 </header>
@@ -35,13 +43,13 @@
 		</form>
 	</section>
 
-	<section id="profile">
-		<h1>Profile</h1>
-		<div class="profileData">Full Name: <span id="profileName"></span></div>
-		<div class="profileData">Email: <span id="profileEmail"></span></div>
-		<div class="profileData">Password: <span id="profilePassword"></span></div>
-		<button id="logoutBtn" class="filledButton">Logout</button>
-	</section>
+<!--	<section id="profile">-->
+<!--		<h1>Profile</h1>-->
+<!--		<div class="profileData">Full Name: <span id="profileName"></span></div>-->
+<!--		<div class="profileData">Email: <span id="profileEmail"></span></div>-->
+<!--		<div class="profileData">Password: <span id="profilePassword"></span></div>-->
+<!--		<button id="logoutBtn" class="filledButton">Logout</button>-->
+<!--	</section>-->
 </main>
 </body>
 </html>

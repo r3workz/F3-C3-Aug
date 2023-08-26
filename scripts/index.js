@@ -1,8 +1,11 @@
-const navSignupBtn = document.getElementById("signUpItem");
-const navProfileBtn = document.getElementById("profileItem");
+// To revert it back to single page with hidden section. Uncomment line 3-7, 27,28, 34,35, 46-49 and comment out lines 30 & 37.
+// if reverted back to single page, then it's safe to delete profile.js & profile.html
 
-const signupSec = document.getElementById("signUp");
-const profileSec = document.getElementById("profile");
+// const signupSec = document.getElementById("signUp");
+// const profileSec = document.getElementById("profile");
+// const pName = document.getElementById("profileName");
+// const pEmail = document.getElementById("profileEmail");
+// const pPassword = document.getElementById("profilePassword");
 
 const signupForm = document.getElementById("signupForm");
 const messageBox = document.getElementById("message");
@@ -10,9 +13,6 @@ const logOutBtn = document.getElementById("logoutBtn");
 
 const accessToken = Math.random().toString(36).substring(7);
 
-const pName = document.getElementById("profileName");
-const pEmail = document.getElementById("profileEmail");
-const pPassword = document.getElementById("profilePassword");
 
 
 function errorMsg(message) {
@@ -25,28 +25,29 @@ function successMsg(message) {
 }
 
 function showProfile() {
-	signupSec.style.display = "none";
-	profileSec.style.display = "block";
+	// signupSec.style.display = "none";
+	// profileSec.style.display = "block";
+
+	window.location.replace("profile.html");
 }
 
 function showSignup() {
-	signupSec.style.display = "block";
-	profileSec.style.display = "none";
+	// signupSec.style.display = "block";
+	// profileSec.style.display = "none";
+
+	window.location.replace("index.html");
 }
 
-function profileData() {
-	// Get the data from localStorage & Set the values to the profile page.
-	pName.innerText = localStorage.getItem("name");
-	pEmail.innerText = localStorage.getItem("email");
-	pPassword.innerText = localStorage.getItem("password");
-}
 
 // Check if the user has an access token in localStorage.
 function checkAccessToken() {
 	if (localStorage.getItem("accessToken")) {
 		// Redirect the user to the profile page.
 		showProfile();
-		profileData();
+		// // Get the data from localStorage & Set the values to the profile page.
+		// pName.innerText = localStorage.getItem("name");
+		// pEmail.innerText = localStorage.getItem("email");
+		// pPassword.innerText = localStorage.getItem("password");
 	} else {
 		// Redirect the user to the signup page.
 		showSignup();
@@ -117,6 +118,8 @@ signupForm.addEventListener("submit", (event) => {
 	document.getElementById("email").value = "";
 	document.getElementById("password").value = "";
 	document.getElementById("confPassword").value = "";
+
+	// Check for AccessToken and redirect to profile page.
 	checkAccessToken();
 });
 
@@ -132,7 +135,5 @@ window.onload = function () {
 	checkAccessToken()
 	if (!localStorage){
 		window.alert("localStorage is not supported");
-	}else{
-		console.log(localStorage)
 	}
 }
