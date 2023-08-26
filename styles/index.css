@@ -1,0 +1,116 @@
+*, *:before, *:after{
+	box-sizing: border-box;
+	font-family: cursive;
+	background-color: #000;
+	color: white;
+}
+
+body{
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0 1.25rem ;
+	position: relative;
+	font-size: 18px;
+}
+
+#navBar, #navBar>*{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1.25rem;
+}
+
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: beige;
+}
+
+main{
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+section{
+	width: 70%;
+	margin: auto;
+}
+
+h1{
+	font-size: 3rem;
+}
+
+form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	gap: 1.25rem;
+}
+input{
+	width: 100%;
+	font-size: 1.25rem;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #666;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	appearance: none;
+}
+
+input:focus{
+	border-bottom: 1px solid #fff;
+	outline: none;
+}
+
+button{
+	/*height: 3rem;*/
+	padding: 0.5rem 3rem;
+	font-size: 1rem;
+}
+
+.filledButton{
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #fff;
+}
+.filledButton:active{
+	color: #fff;
+	background-color: #737373;
+	border: none;
+	transition-duration: 100ms;
+}
+
+#message{
+	font-size: 0.75rem;
+	height: 1rem;
+	width: 100%;
+}
+#message.error{
+	color: red;
+}
+#message.success{
+	color: green;
+}
+
+.profileData{
+	font-family: sans-serif;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+.profileData span{
+	font-size: 1.25rem;
+	font-weight: bold;
+}
